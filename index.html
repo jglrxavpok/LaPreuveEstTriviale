@@ -16,15 +16,16 @@
  */
 
 var intros = [
-    "Il faut juste faire une bijection avec ",
-    "Il faut juste voir le problème comme ",
+    "La preuve est triviale! Il faut juste faire une bijection avec ",
+    "La preuve est triviale! Il faut juste voir le problème comme ",
+    "OK. C'est juste ",
 ];
 
 var adjectives = [
     ["abélien"],
     ["associatif"],
     ["calculable"],
-    ["avec une mesure de Lebesgue"],
+    ["avec une mesure de Lebesgue", "avec des mesures de Lebesgue"],
     ["demi-décidable"],
     ["simple"],
     ["combinatoire"],
@@ -32,13 +33,13 @@ var adjectives = [
     ["diagonalisable"],
     ["inversible"],
     ["orientable"],
-    ["dérivable 2-fois"],
-    ["dérivable 3-fois"],
+    ["dérivable 2-fois", "dérivable 2-fois"],
+    ["dérivable 3-fois", "dérivable 3-fois"],
     ["dénombrable"],
     ["premier"],
     ["complet"],
     ["continu"],
-    ["trivial"],
+    ["trivial", "triviaux"],
     ["3-connexe"],
     ["biparti"],
     ["planaire"],
@@ -52,26 +53,26 @@ var adjectives = [
     ["rationnel"],
     ["régulier"],
     ["Noethérien"],
-    ["Cauchy"],
+    ["de Cauchy", "de Cauchy"],
     ["ouvert"],
     ["fermé"],
     ["compact"],
     ["ouvert-fermé"],
-    ["topologie sans points"],
+    ["topologique sans points", "topologiques sans points"],
     ["parfait"],
     ["non-dégénéré"],
     ["dégénéré"],
     ["antisymétrique"],
     ["sesquilinéaire"],
-    ["fondamental"],
+    ["fondamental", "fondamentaux"],
     ["friable"],
     ["connexe"],
     ["simplexe"],
     ["universel"],
     ["glouton"],
     ["normal"],
-    ["total"],
-    ["inversible à gauche"],
+    ["total", "totaux"],
+    ["inversible à gauche", "inversibles à gauche"],
     ["exact"],
     ["vide"],
 ];
@@ -164,12 +165,12 @@ function plural(nounWithOverride) {
 }
 
 var firstAdjective = randomFromList(adjectives)
-var introSuffix = "un";
+var introSuffix = "un(e)";
 
 //"aeiou".indexOf(firstAdjective[0]) === -1 ? "" : "n";
 
 // Inversion des adjectifs et des noms par rapport à l'anglais
-writeLine(40, "La preuve est triviale! " + randomFromList(intros) + introSuffix);
+writeLine(40, randomFromList(intros) + introSuffix);
 writeLine(70, randomFromList(setNouns)[0]);
 writeLine(70, firstAdjective[0]);
 writeLine(40, "dont les éléments sont des ");
