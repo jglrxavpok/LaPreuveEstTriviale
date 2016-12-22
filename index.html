@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>The proof is trivial!</title>
+    <title>La preuve est triviale!</title>
 </head>
 <body>
 <script type="text/javascript">
@@ -11,68 +11,69 @@
 
 /*
  * Hosted on GitHub.
- * Project page: https://github.com/alangpierce/TheProofIsTrivial
+ * Original Project page: https://github.com/alangpierce/TheProofIsTrivial
+ * This source code is the French translation hosted there: https://github.com/jglrxavpok/LaPreuveEstTriviale
  */
 
 var intros = [
-    "Just biject it to a",
-    "Just view the problem as a",
+    "Il faut juste faire une bijection avec ",
+    "Il faut juste voir le problème comme ",
 ];
 
 var adjectives = [
-    "abelian",
-    "associative",
-    "computable",
-    "Lebesgue-measurable",
-    "semi-decidable",
+    "abélien",
+    "associatif",
+    "calculable",
+    "avec une mesure de Lebesgue",
+    "demi-décidable",
     "simple",
-    "combinatorial",
-    "structure-preserving",
-    "diagonalizable",
-    "nonsingular",
+    "combinatoire",
+    "conversant les structures",
+    "diagonalisable",
+    "inversible",
     "orientable",
-    "twice-differentiable",
-    "thrice-differentiable",
-    "countable",
-    "prime",
-    "complete",
-    "continuous",
+    "dérivable 2-fois",
+    "dérivable 3-fois",
+    "dénombrable",
+    "premier",
+    "complet",
+    "continu",
     "trivial",
-    "3-connected",
-    "bipartite",
-    "planar",
-    "finite",
-    "nondeterministic",
-    "alternating",
-    "convex",
-    "undecidable",
-    "dihedral",
-    "context-free",
-    "rational",
-    "regular",
+    "3-connexe",
+    "biparti",
+    "planaire",
+    "fini",
+    "non-déterministe",
+    "alternatif",
+    "convexe",
+    "non-décidable",
+    "dièdre",
+    "algébrique",
+    "rationnel",
+    "régulier",
     "Noetherian",
     "Cauchy",
-    "open",
-    "closed",
+    "ouvert",
+    "fermé",
     "compact",
-    "clopen",
-    "pointless",
-    "perfect",
-    "non-degenerate",
-    "degenerate",
-    "skew-symmetric",
-    "sesquilinear",
-    "fundamental",
-    "smooth",
-    "connected",
-    "simplicial",
-    "universal",
-    "greedy",
+    "ouvert-fermé",
+    "topologie sans points",
+    "parfait",
+    "non-dégénéré",
+    "dégénéré",
+    "antisymétrique",
+    "sesquilinéaire",
+    "fondamental",
+    "friable",
+    "connexe",
+    "simplexe",
+    "universel",
+    "glouton",
     "normal",
     "total",
-    "left invertible",
+    "inversible à gauche",
     "exact",
-    "empty",
+    "vide",
 ];
 
 /*
@@ -81,32 +82,32 @@ var adjectives = [
  * algorithm in the plural() method.
  */
 var setNouns = [
-    ["multiset"],
-    ["metric space"],
-    ["group"],
-    ["monoid"],
-    ["semigroup"],
-    ["ring"],
-    ["field"],
+    ["multiensemble"],
+    ["espace métrique"],
+    ["groupe"],
+    ["monoïde"],
+    ["demi-groupe"],
+    ["anneau", "anneaux"],
+    ["corps commutatif"],
     ["module"],
-    ["topological space"],
-    ["Hilbert space"],
-    ["manifold"],
-    ["hypergraph"],
-    ["DAG"],
-    ["residue class"],
-    ["logistic system"],
-    ["complexity class"],
-    ["language"],
-    ["poset"],
-    ["algebra"],
-    ["Lie algebra"],
-    ["Dynkin system"],
-    ["sigma-algebra"],
-    ["ultrafilter"],
-    ["Cayley graph"],
-    ["variety"],
-    ["orbit"],
+    ["espace topologique"],
+    ["espace d'Hilbert"],
+    ["variété"],
+    ["hypergraphe"],
+    ["graphe orienté acyclique"],
+    ["classe de congruence"],
+    ["système logistique"],
+    ["classe de complexité"],
+    ["langage"],
+    ["ensemble partiellement ordonné"],
+    ["algèbre"],
+    ["algèbre de Lie", "algèbres de Lie"],
+    ["système de Dynkin"],
+    ["tribu"],
+    ["ultrafiltre"],
+    ["graphe de Cayley"],
+    ["variété algébrique"],
+    ["orbite"],
 ]
 
 var allNouns = setNouns.concat([
@@ -114,29 +115,29 @@ var allNouns = setNouns.concat([
      * Mathematical objects that can't contain elements (unless you're a set
      * theorist).
      */
-    ["integer"],
-    ["Turing machine"],
-    ["automorphism"],
+    ["entier"],
+    ["machine de Turing", "machines de Turing"],
+    ["automorphisme"],
     ["bijection"],
-    ["generating function"],
-    ["taylor series", "taylor series"],
-    ["linear transformation"],
-    ["pushdown automaton", "pushdown automata"],
-    ["combinatorial game"],
-    ["equivalence relation"],
-    ["tournament"],
-    ["random variable"],
+    ["fonction génératrice", "fonctions génératrices"],
+    ["série de Taylor", "séries de Taylor"],
+    ["transformation linéaire"],
+    ["automate à pile", "automates à pile"],
+    ["jeu combinatoire", "jeux combinatoires"],
+    ["relation d'équivalence", "relations d'équivalence"],
+    ["tournoi"],
+    ["variable aléatoire", "variables aléatoires"],
     ["triangulation"],
     ["unbounded-fan-in circuit"],
     ["log-space reduction"],
-    ["Markov chain"],
-    ["4-form"],
-    ["7-chain"],
-    ["operator"],
-    ["homeomorphism"],
-    ["color"],
-    ["Betti number"],
-    ["Radon-Nikodym derivative"],
+    ["chaîne de Markov", "chaînes de Markov"],
+    ["degré 4"],
+    ["chaîne de 7"],
+    ["opérateur"],
+    ["homéomorphisme"],
+    ["couleur"],
+    ["nombre de Betti", "nombres de Betti"],
+    ["dérivée de Radon-Nikodym", "dérivées de Radon-Nikodym"],
 ])
 
 function randomFromList(list) {
@@ -163,26 +164,33 @@ function plural(nounWithOverride) {
 }
 
 var firstAdjective = randomFromList(adjectives)
-var introSuffix = "aeiou".indexOf(firstAdjective[0]) === -1 ? "" : "n";
+var introSuffix = "un";
 
-writeLine(40, "The proof is trivial! " + randomFromList(intros) + introSuffix);
-writeLine(70, firstAdjective);
+//"aeiou".indexOf(firstAdjective[0]) === -1 ? "" : "n";
+
+// Inversion des adjectifs et des noms par rapport à l'anglais
+writeLine(40, "La preuve est triviale! " + randomFromList(intros) + introSuffix);
 writeLine(70, randomFromList(setNouns)[0]);
-writeLine(40, "whose elements are");
-writeLine(70, randomFromList(adjectives));
+writeLine(70, firstAdjective);
+writeLine(40, "dont les éléments sont des ");
 writeLine(70, plural(randomFromList(allNouns)));
+writeLine(70, randomFromList(adjectives)+"s"+"!"); // Les adjectifs en Français s'accordent
 
 
 // Google Analytics
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-46763418-1', 'theproofistrivial.com');
-ga('send', 'pageview');
+ga('send', 'pageview');*/
 //]]>
 </script>
 </body>
+
+<footer style="text-align: center;">
+    <a href="http://www.theproofistrivial.com/">French translation of The Proof Is Trivial!</a>
+</footer>
 </html>
 
