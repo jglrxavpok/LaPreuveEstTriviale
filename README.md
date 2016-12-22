@@ -1,5 +1,6 @@
-# The Proof is Trivial
+# La Preuve est Triviale
 
-Simple JavaScript page that gives a random explanation for how easy math is.
+Petite page en Javascript qui donne une explication aléatoire de la simplicité des mathématiques
 
+English version:
 [theproofistrivial.com](http://theproofistrivial.com)
